@@ -2,20 +2,29 @@
 
 # Bad practices in java code
 
-| Error                  | Correccion               |
-|------------------------|--------------------------|
-| Constructor y clase con| public producto -> public constructorProducto   |
-| mismo nombre           |                          |
-| Variables poco         |                          |
-| descriptivas           |                          |
-| Alcance de los         |                          |
-| atributos de clase     |                          |
-| Variables con tipo de  |                          |
-| dato equivocado        |                          |
-| Inconsistencia en el   |                          |
-| nombre de las          |                          |
-| variables              |                          |
-| Llaves y espacios      |                          |
-| Constructor debe ser   |                          |
-| corregido              |                          |
-| Corregir el SOUT       |                          |
+| Error                  | Correccion                       |
+|------------------------|----------------------------------|
+| Constructor mal hecho  | this.CODIGO = c; this.Nombre = n;|
+|                        | this.Precio = p;                 |
+| Variables poco         | codigoProducto, nombreProducto,  |
+| descriptivas           | precioProducto                   |
+| Encapsulamiento de los | private CODIGO, private Nombre,  |
+| atributos de clase     | private Precio                   |
+| Nombramiento de clase  | Producto.java                    |
+| Inconsistencia en el   | Codigo, Nombre, Precio           |
+| estilo de nombramiento |                                  |
+| Llaves y espacios      | public class producto{           |
+|                        |      // Atributos                |
+|                        |      public producto(parametros){|
+|                        |          // this                 |
+|                        |      }                           |
+|                        |                                  |
+|                        |      public void Mostrar(){      |
+|                        |          // Codigo               |
+|                        |      }                           |
+|                        |   }                              |
+| Formato incorrecto de  | Producto.java, producto, codigo  |
+| nombres de clases y    | etc.                             |
+| variables              |                                  |
+| Malas practicas en el  | System.out.println("Codigo: " +  |
+| print                  | CODIGO);                         |
