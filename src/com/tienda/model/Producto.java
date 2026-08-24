@@ -1,8 +1,5 @@
 package com.tienda.model;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Producto {
 
     /** Atributos de clase. */
@@ -43,7 +40,11 @@ public class Producto {
     }
 
     public void setPrecio(double precio) {
-        this.precio = precio;
+        if (precio <= 0) {
+            return;
+        } else {
+            this.precio = precio;
+        }
     }
     
     /** Getter y setter del atributo existencia. */
@@ -52,7 +53,11 @@ public class Producto {
     }
 
     public void setExistencia(int existencia) {
-        this.existencia = existencia;
+        if (existencia <= 0) {
+            return;
+        } else {
+            this.existencia = existencia;
+        }
     }
 
     /** 
@@ -60,7 +65,7 @@ public class Producto {
      * en la clase "TiendaApp".
      */
     public void mostrarInformacion() {
-        System.out.println("");
+        System.out.printf("Codigo: %s\nNombre: %s\nPrecio: %.2f\nExistencia: %d\n\n", codigo, nombre, precio, existencia);
     }
 
 }
